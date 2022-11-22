@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="e">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+  
+  <title>Controle de Equipamentos - IF</title>
+</head>
+<body style="background-image: linear-gradient(to right,rgba(0, 80, 172, 0.701), rgba(81, 19, 195, 0.715)); ;">
+  
+                             <!--Barra Superior -->
+
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-size: 20px; "><b> Reservas de Equipamentos</b></a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav" style="margin-left: 90%;">
+          <li class="nav-item">
+
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="margin-left:2%; margin-top:3%;">
+    <form method="post">{% csrf_token %}
+        <p style="font-size:150% ;">Tem Certeza Que Deseja Remover o Equipamento:</p>
+        <p style="font-size:150% ;">Nome: {{ object }}</p>
+        <p style="font-size:150% ;">Uso: {{equipamento.uso}}</p>
+        <p style="font-size:150% ;">Identificador: {{ equipamento.idf }}</p>
+        <input style="font-size:150% ;" type="submit" value="Confirmar">
+    </form>
+
+    
+
+
+  </div>
+
+  <p style="text-align:center;margin-left:-5% ; margin-top:38% ;">Desenvolvido Pelo Terceiro Ano - Campus Paulistana</p>
