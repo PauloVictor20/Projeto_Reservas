@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+</head>
+<body style="width:100% ; background-image: linear-gradient(to right,rgba(0, 80, 172, 0.701), rgba(81, 19, 195, 0.715)); ;">
+    
+
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ 
+
+<div class="div1" >
+
+    {% block content %}<!-- As a link -->
+
+                                      <!--Barra Superior -->
+
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-size: 20px; "><b> Reservas de Equipamentos</b></a>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav" style="margin-left: 90%;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="opcitens" > <b> Início</b></a>
+              </li>
+    
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <h1 style="font-size: 40px; text-align: center; margin-top:40px;">Controle de Equipamentos</h1>
+    <div style="margin-left:10%; margin-top: 10% ;">
+      
+      <fieldset>
+
+        <form method="post" s>{% csrf_token %}
+          
+          {{ form.as_p }}
+
+           
+        
+            <a href="{% url 'equip_list' %}"><button class="btn btn-outline-light">Nova Ferramenta</button></a>
+    
+        </form>
+      </fieldset>
+        
+  
+   
+
+
+    </div>
+
+
+ <ul class="nav nav-pills nav-fill" style="margin-top:11%; margin-left:-15%; position: relative;">
+  <li class="nav-item">
+    <p style="text-align:center;margin-left:150px ;">Desenvolvido Pelo Terceiro Ano - Campus Paulistana</p>
+  </li>
+  
+  
+  
+  
+  
+  
+  
+    
+            
+    {% endblock %}
+
+
+</body>
+
+</html>
